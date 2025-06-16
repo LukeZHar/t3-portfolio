@@ -31,13 +31,13 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-4xl">
           {/* Hero Section */}
           <div className="mb-16 text-center">
-            <Avatar className="mx-auto mb-6 h-32 w-32">
+            <Avatar className="mx-auto mb-6 h-40 w-32">
               <AvatarImage src="/Resume-pic.jpg" alt="Profile Picture" />
               <AvatarFallback className="text-2xl">LH</AvatarFallback>
             </Avatar>
             <h1 className="mb-4 text-4xl font-bold">About Me</h1>
             <p className="text-muted-foreground mx-auto max-w-2xl text-xl">
-              Hi, I&apos;m <strong>Luke H.</strong>, a passionate software
+              Hi, I&apos;m <strong>Luke H</strong>, a passionate software
               developer with a love for creating innovative solutions. I
               specialise in full-stack development and have a keen interest in
               web technologies.
@@ -185,7 +185,7 @@ export default function AboutPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="Md:grid-cols-3 grid gap-6">
+              <div className="md:grid-cols-3 grid gap-6">
                 <div className="space-y-2 text-center">
                   <div className="bg-primary/10 text-primary mx-auto flex h-12 w-12 items-center justify-center rounded-lg">
                     <Swords className="h-6 w-6" />

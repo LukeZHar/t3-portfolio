@@ -136,8 +136,8 @@ const HomePage = () => {
                 Brisbane, Australia
               </div>
               <h1 className="text-4xl font-bold tracking-tight lg:text-6xl">
-                Hi, I&apos;m Luke Harris
-                <span className="text-primary">Full-stack Developer</span>
+                Hi, I&apos;m Luke Harris,
+                <span className="text-primary"> Full-stack Developer</span>
               </h1>
               <p className="text-muted-foreground max-wd-md text-lg leading-relaxed">
                 I am a passionate full-stack developer with a keen interest in
@@ -151,9 +151,12 @@ const HomePage = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="group">
+                <Button size="lg" variant="outline" className="group" onClick={
+                  () => window.open("/Luke.pdf", "_blank")
+                }>
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-                  Download Resume
+                  Redirect to Resume
+
                 </Button>
               </div>
               <div className="flex items-center gap-4">
@@ -184,9 +187,9 @@ const HomePage = () => {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="from-primary/20 absolute -inset-4 rounded-full bg-gradient-to-r to-purple-600/20 blur-2xl">
+                <div className="rounded-full ">
                   <Avatar className="relative h-64 w-64">
-                    <AvatarImage src="/Resume-pic.jpg" alt="Luke Harris" />
+                    <AvatarImage src="/L.H.png" alt="Luke Harris" />
                     <AvatarFallback className="text-4xl">LH</AvatarFallback>
                   </Avatar>
                 </div>
@@ -279,7 +282,7 @@ const HomePage = () => {
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-1 mb-4">
+                  <div className="mb-4 flex flex-wrap gap-1">
                     {project.technologies.slice(0, 3).map((tech) => (
                       <Badge key={tech} variant="outline" className="text-xs">
                         {tech}
@@ -301,7 +304,7 @@ const HomePage = () => {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="mt-12 text-center">
             <Button size="lg" variant="outline" asChild>
               <Link href="/projects">
                 View All Projects
@@ -313,11 +316,11 @@ const HomePage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4">
+      <section className="px-4 py-16">
         <div className="container mx-auto text-center">
-          <div className="max-w-2xl mx-auto space-y-6">
+          <div className="mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-bold">Ready to Start Your Project?</h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-muted-foreground text-xl">
               Whether you need a full-stack application or just a frontend
               component, I&apos;m here to help. Let&apos;s work together to
               bring your ideas to life.
@@ -335,7 +338,7 @@ const HomePage = () => {
       <ProjectModal
         project={selectedProject}
         isOpen={isModalOpen}
-        onClose={() =>  setIsModalOpen(false)}
+        onClose={() => setIsModalOpen(false)}
       />
     </div>
   );

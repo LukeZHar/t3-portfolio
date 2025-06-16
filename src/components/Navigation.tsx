@@ -26,7 +26,7 @@ export function Navigation() {
           <img 
             src="/L.H.png"
             alt="Logo"
-            className="h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full ml-5"
           />
         </Link>
 
