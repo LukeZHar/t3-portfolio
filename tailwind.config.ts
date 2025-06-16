@@ -110,4 +110,28 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
+
+  // @ts-expect-error: safelist is supported in Tailwind v4
+  safelist: [
+    "bg-background",
+    "bg-muted",
+    "bg-primary",
+    "bg-secondary",
+    "bg-accent",
+    "bg-destructive",
+    "text-background",
+    "text-muted-foreground",
+    "text-primary",
+    "text-primary-foreground",
+    "text-secondary",
+    "text-secondary-foreground",
+    "text-accent",
+    "text-accent-foreground",
+    "text-destructive",
+    "text-destructive-foreground",
+    "border-border",
+    "border-input",
+    "border-ring",
+    // Add any other classes you need
+  ],
 } satisfies Config;

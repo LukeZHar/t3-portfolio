@@ -209,7 +209,7 @@ const HomePage = () => {
               and backend challenges effectively.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {skills.map((skillGroup) => (
               <Card
                 key={skillGroup.category}

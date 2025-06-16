@@ -21,12 +21,12 @@ export function Navigation() {
 
   return (
     <nav className="bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 w-full border-b backdrop-blur">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center justify-around">
         <Link href="/" className="text-primary text-xl font-bold">
-          <img 
+          <img
             src="/L.H.png"
             alt="Logo"
-            className="h-8 w-8 rounded-full ml-5"
+            className="ml-5 h-8 w-8 rounded-full"
           />
         </Link>
 
