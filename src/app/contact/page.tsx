@@ -14,7 +14,7 @@ import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Label } from "~/components/ui/label";
 import { Separator } from "~/components/ui/separator";
-import { toast, Toaster, useSonner } from "sonner";
+import { toast } from "sonner";
 import {
   Mail,
   Phone,
@@ -22,12 +22,10 @@ import {
   Github,
   Linkedin,
   Send,
-  Calendar,
   MessageCircle,
 } from "lucide-react";
 
 export default function ContactPage() {
-  const { toasts } = useSonner();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -227,7 +225,7 @@ export default function ContactPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full"
+                      className="w-full border-1 rounded-md"
                       size="lg"
                     >
                       {isSubmitting ? (

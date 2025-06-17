@@ -50,7 +50,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               src={project.videoUrl}
               controls
               className="h-full w-full object-cover"
-              poster="/placeholder.svg"
+              poster="/L.H.png"
             >
               Your browser does not support the video tag.
             </video>

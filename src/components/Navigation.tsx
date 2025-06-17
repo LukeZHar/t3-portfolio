@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "~/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "~/components/ui/sheet";
+import { Menu } from "lucide-react";
 import { cn } from "~/lib/utils";
 
 const navItems = [
@@ -21,12 +21,12 @@ export function Navigation() {
 
   return (
     <nav className="bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 w-full border-b backdrop-blur">
-      <div className="container flex h-16 items-center justify-around">
+      <div className=" flex h-16 items-center justify-between mx-6">
         <Link href="/" className="text-primary text-xl font-bold">
           <img
             src="/L.H.png"
             alt="Logo"
-            className="ml-5 h-8 w-8 rounded-full"
+            className="h-8 w-8 rounded-full"
           />
         </Link>
 
@@ -48,7 +48,7 @@ export function Navigation() {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block border-1 rounded-md">
           <Button asChild>
             <Link href="/contact">Get In Touch</Link>
           </Button>
@@ -63,7 +63,9 @@ export function Navigation() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <div className="mt-8 flex flex-col space-y-4">
+            <SheetTitle hidden>Menu</SheetTitle>
+            <SheetDescription hidden>Description</SheetDescription>
+            <div className="mt-8 flex flex-col space-y-4 mx-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -79,7 +81,7 @@ export function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="mt-4">
+              <Button asChild className="mt-4 border-1 rounded-md">
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   Get In Touch
                 </Link>

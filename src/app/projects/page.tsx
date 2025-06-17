@@ -13,7 +13,7 @@ import {
 } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Input } from "~/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { Play, Github, ExternalLink, Search, Calendar } from "lucide-react";
 
 const allProjects = [
@@ -91,7 +91,7 @@ const allProjects = [
       "This is a terminal-based flashcard quiz application built with Python. It allows users to create, manage, and take quizzes using flashcards. The application supports multiple-choice questions and provides a simple command-line interface for interaction.",
     videoUrl: "/videos/flashcardCLI.mp4",
     technologies: ["Python", "CLI"],
-    category: "CLI",
+    category: "Backend",
     year: 2024,
     githubUrl: "https://github.com/LukeZHar/T1A3-Terminal_application",
     image: "/L.H.png",
@@ -211,10 +211,6 @@ export default function ProjectsPage() {
               |
               <TabsTrigger className="focus:bg-black/100" value="frontend">
                 Frontend
-              </TabsTrigger>
-              |
-              <TabsTrigger className="focus:bg-black/100" value="cli">
-                CLI
               </TabsTrigger>
             </TabsList>
           </Tabs>
