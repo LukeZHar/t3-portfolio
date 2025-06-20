@@ -20,8 +20,8 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 w-full border-b backdrop-blur">
-      <div className=" flex h-16 items-center justify-between mx-6">
+    <nav className="bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 w-full border-b backdrop-blur px-1 md:px-40">
+      <div className="flex h-16 items-center justify-between mx-6">
         <Link href="/" className="text-primary text-xl font-bold">
           <img
             src="/L.H.png"

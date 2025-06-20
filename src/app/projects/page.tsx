@@ -192,7 +192,7 @@ export default function ProjectsPage() {
 
           {/* Filters */}
           <Tabs value={isActiveTab} onValueChange={setIsActiveTab}>
-            <TabsList className="mx-auto mb-4 flex w-full max-w-md flex-row bg-zinc-800">
+            <TabsList className="mx-auto mb-4 md:flex w-full max-w-md md:flex-row bg-zinc-800 text-sm">
               <TabsTrigger className="focus:bg-black/100" value="all">
                 All 
               </TabsTrigger>

@@ -37,7 +37,7 @@ export default function AboutPage() {
             </Avatar>
             <h1 className="mb-4 text-4xl font-bold">About Me</h1>
             <p className="text-muted-foreground mx-auto max-w-2xl text-xl">
-              Hi, I&apos;m <strong>Luke H</strong>, a passionate software
+              Hi, I&apos;m <strong className="text-primary">Luke Harris</strong>, a passionate software
               developer with a love for creating innovative solutions. I
               specialise in full-stack development and have a keen interest in
               web technologies.
