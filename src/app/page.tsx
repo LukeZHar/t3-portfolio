@@ -152,7 +152,7 @@ const HomePage = () => {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="group" onClick={
-                  () => window.open("/Luke.pdf", "_blank")
+                  () => window.open("/LukePort.pdf", "_blank")
                 }>
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                   Redirect to Resume
