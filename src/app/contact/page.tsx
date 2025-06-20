@@ -90,7 +90,7 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-center gap-3">
+                  <a href="mailto:luke.z.harris@hotmail.com" className="flex items-center gap-3">
                     <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
                       <Mail className="h-4 w-4" />
                     </div>
@@ -100,8 +100,8 @@ export default function ContactPage() {
                         Luke.z.harris@hotmail.com
                       </p>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-3">
+                  </a>
+                  <a href="tel:0481752532" className="flex items-center gap-3">
                     <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
                       <Phone className="h-4 w-4" />
                     </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                         0481 752 532
                       </p>
                     </div>
-                  </div>
+                  </a>
                   <div className="flex items-center gap-3">
                     <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
                       <MapPin className="h-4 w-4" />

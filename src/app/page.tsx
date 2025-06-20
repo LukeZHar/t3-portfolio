@@ -179,7 +179,7 @@ const HomePage = () => {
                   </a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
-                  <a href="mailto:lukey0011@gmail.com">
+                  <a href="mailto:luke.z.harris@hotmail.com">
                     <Mail className="h-5 w-5" />
                   </a>
                 </Button>
