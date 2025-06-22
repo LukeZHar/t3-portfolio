@@ -168,7 +168,7 @@ export default function AboutPage() {
                     Certifications
                   </h3>
                   <div className="space-y-2">
-                    <Badge variant="secondary">Certified Web Developmer</Badge>
+                    <Badge variant="secondary">Certified Web Developer</Badge>
                     <Badge variant="secondary">Udemy QA tester</Badge>
                   </div>
                 </div>

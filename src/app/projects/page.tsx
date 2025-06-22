@@ -17,7 +17,6 @@ import { Tabs, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { Play, Github, ExternalLink, Search, Calendar } from "lucide-react";
 import { allProjects } from "~/lib/const";
 
-
 export default function ProjectsPage() {
   const [isSelectedProject, setIsSelectedProject] = useState<
     (typeof allProjects)[0] | null
@@ -69,9 +68,9 @@ export default function ProjectsPage() {
 
           {/* Filters */}
           <Tabs value={isActiveTab} onValueChange={setIsActiveTab}>
-            <TabsList className="mx-auto mb-4 md:flex w-full max-w-md md:flex-row bg-zinc-800 text-sm">
+            <TabsList className="mx-auto mb-4 w-full max-w-md bg-zinc-800 text-sm md:flex md:flex-row">
               <TabsTrigger className="focus:bg-black/100" value="all">
-                All 
+                All
               </TabsTrigger>
               |
               <TabsTrigger className="focus:bg-black/100" value="featured">

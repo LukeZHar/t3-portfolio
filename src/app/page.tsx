@@ -68,12 +68,14 @@ const HomePage = () => {
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="group" onClick={
-                  () => window.open("/LukePort.pdf", "_blank")
-                }>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="group"
+                  onClick={() => window.open("/LukePort.pdf", "_blank")}
+                >
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                   Redirect to Resume
-
                 </Button>
               </div>
               <div className="flex items-center gap-4">
@@ -104,7 +106,7 @@ const HomePage = () => {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="rounded-full ">
+                <div className="rounded-full">
                   <Avatar className="relative h-64 w-64">
                     <AvatarImage src="/L.H.png" alt="Luke Harris" />
                     <AvatarFallback className="text-4xl">LH</AvatarFallback>
@@ -173,55 +175,55 @@ const HomePage = () => {
             {allProjects
               .filter((project) => project.featured)
               .map((project) => (
-              <Card
-                key={project.id}
-                className="group cursor-pointer transition-all hover:-translate-y-1 hover:shadow-xl"
-                onClick={() => handleProjectClick(project)}
-              >
-                <CardHeader className="relative">
-                  <div className="bg-muted relative mb-4 aspect-video overflow-hidden rounded-md">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
-                      <Button
-                        size="icon"
-                        variant="secondary"
-                        className="rounded-full"
-                      >
-                        <Play className="h-6 w-6" />
+                <Card
+                  key={project.id}
+                  className="group cursor-pointer transition-all hover:-translate-y-1 hover:shadow-xl"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <CardHeader className="relative">
+                    <div className="bg-muted relative mb-4 aspect-video overflow-hidden rounded-md">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
+                        <Button
+                          size="icon"
+                          variant="secondary"
+                          className="rounded-full"
+                        >
+                          <Play className="h-6 w-6" />
+                        </Button>
+                      </div>
+                    </div>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="mb-4 flex flex-wrap gap-1">
+                      {project.technologies.slice(0, 3).map((tech) => (
+                        <Badge key={tech} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                      {project.technologies.length > 3 && (
+                        <Badge variant="outline" className="text-xs">
+                          +{project.technologies.length - 3} more
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="flex gap-2">
+                      <Button variant="ghost" size="sm" className="flex-1">
+                        <Play className="mr-2 h-4 w-4" />
+                        Watch video
                       </Button>
                     </div>
-                  </div>
-                  <CardTitle className="group-hover:text-primary transition-colors">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="mb-4 flex flex-wrap gap-1">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{project.technologies.length - 3} more
-                      </Badge>
-                    )}
-                  </div>
-                  <div className="flex gap-2">
-                    <Button variant="ghost" size="sm" className="flex-1">
-                      <Play className="mr-2 h-4 w-4" />
-                      Watch video
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
           </div>
           <div className="mt-12 text-center">
             <Button size="lg" variant="outline" asChild>
