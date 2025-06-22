@@ -20,6 +20,7 @@ interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  image?: string;
 }
 
 interface ProjectModalProps {
@@ -46,14 +47,25 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         <div className="space-y-6">
           {/* Video Player */}
           <div className="bg-muted aspect-video w-full overflow-hidden rounded-lg">
-            <video
-              src={project.videoUrl}
-              controls
-              className="h-full w-full object-cover"
-              poster="/L.H.png"
-            >
-              Your browser does not support the video tag.
-            </video>
+            {project.videoUrl.includes("youtube.com/embed") ? (
+              <iframe
+                src={project.videoUrl}
+                title={project.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            ) : (
+              <video
+                src={project.videoUrl}
+                controls
+                className="h-full w-full object-cover"
+                poster={project.image}
+              >
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
 
           {/* Project Details */}

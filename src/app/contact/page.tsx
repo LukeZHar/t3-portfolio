@@ -66,9 +66,52 @@ export default function ContactPage() {
 
       <div className="px-4 pt-24 pb-12">
         <div className="container mx-auto max-w-6xl">
+          {/* Additional Info Section */}
+          <div className="mt-16 text-center">
+            <div className="mx-auto max-w-2xl space-y-4">
+              <h1 className="text-4xl font-bold">Why Work With Me?</h1>
+              <p className="text-muted-foreground">
+                I&apos;m passionate about creating beautiful, functional web
+                applications that solve real problems. With a focus on user
+                experience and performance, I strive to deliver high-quality
+                solutions that exceed expectations.
+              </p>
+              <p className="text-muted-foreground">
+                Whether you need a new website, a web application, or just some
+                advice on your next project, I&apos;m here to help. Let&apos;s
+                make something great together!
+              </p>
+              <p className="text-muted-foreground">I Aim For:</p>
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div className="text-center">
+                  <div className="text-primary text-lg font-semibold">100%</div>
+                  <div className="text-muted-foreground text-sm">
+                    Client Satisfaction
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-primary text-lg font-semibold">24/7</div>
+                  <div className="text-muted-foreground text-sm">
+                    Support & Communication
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-primary text-lg font-semibold">
+                    1-3 Days
+                  </div>
+                  <div className="text-muted-foreground text-sm">
+                    Response Time
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Separator className="my-8" />
+
           {/* Header Section */}
           <div className="mb-12 text-center">
-            <h1 className="mb-4 text-4xl font-bold">Get In Touch</h1>
+            <h1 className="mb-4 text-3xl font-bold">Get In Touch</h1>
             <p className="text-muted-foreground mx-auto max-w-2xl text-xl">
               Have a question or want to work together? I&apos;d love to hear
               from you. Let&apos;s connect and discuss your ideas!
@@ -90,7 +133,10 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <a href="mailto:luke.z.harris@hotmail.com" className="flex items-center gap-3">
+                  <a
+                    href="mailto:luke.z.harris@hotmail.com"
+                    className="flex items-center gap-3"
+                  >
                     <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
                       <Mail className="h-4 w-4" />
                     </div>
@@ -225,7 +271,7 @@ export default function ContactPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full border-1 rounded-md"
+                      className="w-full rounded-md border-1"
                       size="lg"
                     >
                       {isSubmitting ? (
@@ -240,48 +286,6 @@ export default function ContactPage() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-
-          {/* Additional Info Section */}
-          <div className="mt-16 text-center">
-            <Separator className="mb-8" />
-            <div className="mx-auto max-w-2xl space-y-4">
-              <h2 className="text-2xl font-bold">Why Work With Me?</h2>
-              <p className="text-muted-foreground">
-                I&apos;m passionate about creating beautiful, functional web
-                applications that solve real problems. With a focus on user
-                experience and performance, I strive to deliver high-quality
-                solutions that exceed expectations.
-              </p>
-              <p className="text-muted-foreground">
-                Whether you need a new website, a web application, or just some
-                advice on your next project, I&apos;m here to help. Let&apos;s
-                make something great together!
-              </p>
-              <p className="text-muted-foreground">I Aim For:</p>
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="text-center">
-                  <div className="text-primary text-lg font-semibold">100%</div>
-                  <div className="text-muted-foreground text-sm">
-                    Client Satisfaction
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-primary text-lg font-semibold">24/7</div>
-                  <div className="text-muted-foreground text-sm">
-                    Support & Communication
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-primary text-lg font-semibold">
-                    1-3 Days
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    Response Time
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

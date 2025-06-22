@@ -26,98 +26,15 @@ import {
   Palette,
   Database,
 } from "lucide-react";
-
-const projects = [
-  {
-    id: "1",
-    title: "Pump Task",
-    description:
-      "A t3 task management app for teams to collaborate and track their work.",
-    longDescription:
-      "Pump task is a task managmenet app that allows teams to collaborate and track their work. It features real-time updates, task assignments, and progress tracking. It has a inuilt NFT reward system that allows users to earn NFTs for completing tasks.",
-    videoUrl: "/videos/Pump-task.mp4",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "ThirdWeb",
-      "MongoDB",
-    ],
-    githubUrl: "https://github.com/LukeZHar/Internship-Pump-Task",
-    image: "/images/pump-task.png",
-  },
-  {
-    id: "2",
-    title: "A ticket, A task it",
-    description:
-      "A MERN stack application that allows users to create and manage tickets.",
-    longDescription:
-      "A Ticket a Task It is a task management application developed using the MERN stack. The application aims to streamline task management and improve collaboration across teams by providing a user-friendly interface and robust backend functionalities",
-    videoUrl: "/videos/Ticket-Task.mp4",
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "CSS"],
-    githubUrl: "https://github.com/LukeZHar/MERN-Wizards-T3A2-B",
-    liveUrl: "https://a-ticket-a-task-it.netlify.app/",
-    image: "/images/Mern-Wiz.png",
-  },
-  {
-    id: "3",
-    title: "Game Management Api",
-    description: "PostgreSQL and Flask API for managing game data",
-    longDescription:
-      "A Game Management API built with Python and Flask, designed to provide a robust backend for managing game data. This API allows developers to perform CRUD operations on game entities such as players, achievments, and sessions.",
-    videoUrl: "/videos/GameManagementAPI.mp4",
-    technologies: ["Python", "Flask", "PostgreSQL"],
-    githubUrl: "https://github.com/LukeZHar/LukeHarris-T2A2",
-    image: "/images/Game-Api.png",
-  },
-];
-
-const skills = [
-  {
-    category: "Frontend",
-    icon: <Code className="h-5 w-5" />,
-    items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    category: "Backend",
-    icon: <Database className="h-5 w-5" />,
-    items: [
-      "Node.js",
-      "Express.js",
-      "Flask",
-      "Python",
-      "MongoDB",
-      "PostgreSQL",
-    ],
-  },
-  {
-    category: "Design",
-    icon: <Palette className="h-5 w-5" />,
-    items: [
-      "Figma",
-      "Canva",
-      "UI/UX Design",
-      "Wireframing",
-      "Responsive Design",
-    ],
-  },
-];
+import { allProjects, skills } from "~/lib/const";
 
 const HomePage = () => {
   const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[0] | null
+    (typeof allProjects)[0] | null
   >(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: (typeof projects)[0]) => {
+  const handleProjectClick = (project: (typeof allProjects)[0]) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -253,7 +170,9 @@ const HomePage = () => {
             </p>
           </div>
           <div className="grid gap-8 lg:grid-cols-3">
-            {projects.map((project) => (
+            {allProjects
+              .filter((project) => project.featured)
+              .map((project) => (
               <Card
                 key={project.id}
                 className="group cursor-pointer transition-all hover:-translate-y-1 hover:shadow-xl"
