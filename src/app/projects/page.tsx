@@ -68,26 +68,12 @@ export default function ProjectsPage() {
 
           {/* Filters */}
           <Tabs value={isActiveTab} onValueChange={setIsActiveTab}>
-            <TabsList className="mx-auto mb-4 w-full max-w-md bg-zinc-800 text-sm md:flex md:flex-row">
-              <TabsTrigger className="focus:bg-black/100" value="all">
-                All
-              </TabsTrigger>
-              |
-              <TabsTrigger className="focus:bg-black/100" value="featured">
-                Featured
-              </TabsTrigger>
-              |
-              <TabsTrigger className="focus:bg-black/100" value="full stack">
-                Full Stack
-              </TabsTrigger>
-              |
-              <TabsTrigger className="focus:bg-black/100" value="backend">
-                Backend
-              </TabsTrigger>
-              |
-              <TabsTrigger className="focus:bg-black/100" value="frontend">
-                Frontend
-              </TabsTrigger>
+            <TabsList className="mx-auto mb-4 w-full max-w-md text-sm md:flex md:flex-row">
+              <TabsTrigger value="all">All</TabsTrigger>|
+              <TabsTrigger value="featured">Featured</TabsTrigger>|
+              <TabsTrigger value="full stack">Full Stack</TabsTrigger>|
+              <TabsTrigger value="backend">Backend</TabsTrigger>|
+              <TabsTrigger value="frontend">Frontend</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
